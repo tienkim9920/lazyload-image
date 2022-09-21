@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazyload Image</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .group-image {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 3rem;
+        }
+
+        .group-image img{
+            width: 100%;
+            height: 300px;
+            background: beige;
+        }
+        
+        .active {
+            transform: translateY(0px) !important;
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 800px; background: red;"></div>
+    <div section-test style="height: 800px; background: yellow; transform: translateY(200px);"></div>
+    <div section-test style="height: 800px; background: red; transform: translateY(200px);"></div>
+    <div class="group-image">
+        <img alt="123" lazy-src="https://bizweb.dktcdn.net/thumb/large/100/331/067/products/304840509-5388809131227224-4667854864475480248-n.jpg?v=1662116931597" />
+        <img alt="123" lazy-src="https://bizweb.dktcdn.net/thumb/large/100/331/067/products/304840509-5388809131227224-4667854864475480248-n.jpg?v=1662116931597" />
+        <img alt="123" lazy-src="https://bizweb.dktcdn.net/thumb/large/100/331/067/products/304840509-5388809131227224-4667854864475480248-n.jpg?v=1662116931597" />
+        <img alt="123" lazy-src="https://bizweb.dktcdn.net/thumb/large/100/331/067/products/304840509-5388809131227224-4667854864475480248-n.jpg?v=1662116931597" />
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>
